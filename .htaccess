@@ -1,0 +1,46 @@
+<?php
+// URL rewriting and security
+/*
+# Enable URL Rewriting
+RewriteEngine On
+
+# Redirect to HTTPS (Optional - for production)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Hide PHP extensions
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Protect sensitive files
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "config\.php$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Prevent access to uploads directory PHP execution
+<Directory "uploads">
+    php_flag engine off
+</Directory>
+
+# Set upload limits
+php_value upload_max_filesize 5M
+php_value post_max_size 6M
+php_value max_execution_time 300
+php_value max_input_time 300
+*/
