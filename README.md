@@ -18,7 +18,7 @@
 - **Backend**: PHP (Core)
 - **Database**: MySQL
 - **Frontend**: HTML, CSS, JavaScript
-- **Server**: Apache (XAMPP, WAMP, or LAMP)
+- **Server**: Apache (XAMPP)
 - **Version Control**: Git, GitHub
 
 
